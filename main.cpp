@@ -2,8 +2,25 @@
 
 #include "worker/workerManager.h"
 
+#include "worker/worker.h"
+#include "worker/employee.h"
+#include "worker/manager.h"
+#include "worker/Boss.h"
+
 int main() {
 
+    Worker *worker = NULL;
+    worker = new Employee(1, "jack", 1);
+    worker->showInfo();
+    delete worker;
+
+    worker = new Manager(2, "ภ๏หน", 2);
+    worker->showInfo();
+    delete worker;
+
+    worker = new Boss(3, "wangwu", 3);
+    worker->showInfo();
+    delete worker;
 
     WorkerManager workerManager;
 
@@ -17,6 +34,7 @@ int main() {
                 workerManager.exitSystem();
                 break;
             case 1:
+                workerManager.addWorker();
                 break;
             case 2:
                 break;
