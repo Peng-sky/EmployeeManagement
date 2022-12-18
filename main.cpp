@@ -1,7 +1,6 @@
 #include <iostream>
 
 #include "worker/workerManager.h"
-
 #include "worker/worker.h"
 #include "worker/employee.h"
 #include "worker/manager.h"
@@ -37,22 +36,26 @@ int main() {
                 workerManager.addWorker();
                 break;
             case 2:
+                workerManager.showWorker();
                 break;
             case 3:
+                workerManager.delWorker();
                 break;
             case 4:
+                workerManager.modifyWorker();
                 break;
             case 5:
+                workerManager.findWorker();
                 break;
             case 6:
+                workerManager.sortWorkers();
                 break;
             case 7:
+                workerManager.clearFile();
                 break;
             default:
                 break;
         }
     }
-
-
     return 0;
 }

@@ -19,6 +19,8 @@ using namespace std;
 
 class WorkerManager {
 public:
+    bool emptyFile;
+
     WorkerManager();
 
     void showMenu();
@@ -27,11 +29,29 @@ public:
 
     int number;
 
-    Worker **workers;
+    Worker** workers;
 
     void addWorker();
 
     void save();
+
+    int getWorkerNumbers();
+
+    void initWorker();
+
+    void showWorker();
+
+    int isExist(int id);
+
+    void delWorker();
+
+    void modifyWorker();
+
+    void findWorker();
+
+    void sortWorkers();
+
+    void clearFile();
 
     ~WorkerManager();
 };
